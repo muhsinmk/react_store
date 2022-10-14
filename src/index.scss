@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+$body_bg: #f5ebe0;
+$background: #fff;
+$border: #ddd;
+$accent_blue: #0284c7;
+$accent_green: #22c55e;
+$accent_red: #f43f5e;
+
+@mixin button($bg, $txt) {
+  background: $bg;
+  color: $txt;
+  border: 1px solid $bg;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin small_button($bg, $txt) {
+  background: $bg;
+  color: $txt;
+  border: 1px solid $bg;
+  width: 30px;
+  padding: 3px 0px;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $body_bg;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $accent_blue;
+  font-weight: 500;
+}
+.appWrapper {
+  max-width: 960px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  background: $background;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appHeader {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 a{
+    color:#222;
+  }
+  ul.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.appMain {
+  flex: 1;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  padding: 20px 0px;
+  .productHome {
+    // display: grid;
+    // grid-template-columns: 8fr 4fr;
+    // gap: 20px;
+    .productGallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px 20px;
+      .productItem {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .itemName {
+          text-align: center;
+        }
+        .itemPic {
+          border-radius: 3px;
+        }
+        .itemMeta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .itemPrice {
+            font-weight: bold;
+          }
+          .cartButton {
+            cursor: pointer;
+            @include button($accent_blue, #fff);
+          }
+          .addedButton {
+            cursor: pointer;
+            @include button($accent_green, #fff);
+          }
+        }
+      }
+    }
+  }
+
+  .singleProduct{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 20px;
+    .cartButton{
+      cursor: pointer;
+      @include button($accent_blue, #fff);
+      display: block;
+    }
+  }
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 0px;
+  .cartList {
+    display: flex;
+    flex-direction: column;
+    .cartItem {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0px;
+      .itemPic {
+        width: 60px;
+      }
+      .itemInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .cartUpdater {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          button {
+            @include small_button(#222, white);
+          }
+        }
+      }
+      .itemPrice {
+        margin-left: auto;
+        font-weight: bold;
+        padding: 0px 10px;
+      }
+    }
+  }
+
+  .cartTotal {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .cartFooter {
+    display: flex;
+    justify-content: space-between;
+    .clear {
+      @include button(#e11d48, #fff);
+    }
+    .checkout {
+      @include button(#15803d, #fff);
+    }
+  }
+}
+
+.appFooter {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

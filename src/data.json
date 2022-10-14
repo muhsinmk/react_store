@@ -1,0 +1,86 @@
+{
+  "products": [
+    {
+      "id": "628779447ee672e63c420666",
+      "title": "Fuentes Rojas",
+      "price": 60,
+      "image": "prod001.png"
+    },
+    {
+      "id": "62877944f20b0171d494fa0f",
+      "title": "Mathis Oneal",
+      "price": 30,
+      "image": "prod002.png"
+    },
+    {
+      "id": "628779443587a39942df3cec",
+      "title": "Barton Blackwell",
+      "price": 40,
+      "image": "prod003.png"
+    },
+    {
+      "id": "62877944bcbadf8731a2342d",
+      "title": "Latasha Tyler",
+      "price": 70,
+      "image": "prod004.png"
+    },
+    {
+      "id": "62877944d757ba8390501430",
+      "title": "Shields Carroll",
+      "price": 45,
+      "image": "prod005.png"
+    },
+    {
+      "id": "62877944ca257f2af1dca713",
+      "title": "Mildred Bullock",
+      "price": 25,
+      "image": "prod006.png"
+    },
+    {
+      "id": "628779443b31d5ddee2d6db2",
+      "title": "Antonia Hinton",
+      "price": 35,
+      "image": "prod007.png"
+    },
+    {
+      "id": "6287794471b16d6e91544bba",
+      "title": "Schmidt Mueller",
+      "price": 40,
+      "image": "prod008.png"
+    },
+    {
+      "id": "62877944f0636000a8c48bc1",
+      "title": "Brittney Alvarado",
+      "price": 45,
+      "image": "prod009.png"
+    },
+    {
+      "id": "62877944c20c1786eef10e88",
+      "title": "Pope William",
+      "price": 55,
+      "image": "prod010.png"
+    },
+    {
+      "id": "628779442d0208891281f9d0",
+      "title": "Stein Odonnell",
+      "price": 70,
+      "image": "prod011.png"
+    },
+    {
+      "id": "628779448baf24dd88bad6f6",
+      "title": "Jennifer Wilder",
+      "price": 70,
+      "image": "prod012.png"
+    }
+  ],
+  "posts": [
+    {
+      "id": "weqwe3452345",
+      "title": "Lorem ipsum"
+    },
+    {
+      "id": "o789iuyoi07869787",
+      "title": "My New post"
+    }
+  ]
+}
