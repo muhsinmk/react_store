@@ -16,7 +16,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `npm server`
-npt json-server --watch src/data.json --port 4000
+npx json-server --watch src/data.json --port 4000
 
 ### `npm test`
 
